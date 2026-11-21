@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 /* -------------------------------------------------------------------------- */
 /* Real Project Image Assets with Guaranteed Dual-Endpoint Resolution          */
@@ -3824,6 +3825,8 @@ html.motion-ready [data-reveal].is-visible {
         onClose={() => setGuideModalOpen(false)}
         onBook={handleOpenBooking}
       />
+
+      <Analytics />
     </div>
   );
 }
